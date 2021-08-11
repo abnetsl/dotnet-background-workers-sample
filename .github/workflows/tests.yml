@@ -1,0 +1,15 @@
+name: Tests
+
+on: [push]
+
+jobs:
+  application:
+    name: ABnet.BackgroundWorkersTests
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: '5.0.200'
+    - name: Test
+      run: dotnet test ABnet.BackgroundWorkersTests
