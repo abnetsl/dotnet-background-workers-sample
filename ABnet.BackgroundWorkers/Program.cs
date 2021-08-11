@@ -27,13 +27,16 @@ namespace ABnet.BackgroundWorkers
                 .CreateDefaultBuilder()
                 .ConfigureServices((host, services) =>
                 {
+                    // Add hosted services
                     services
                         .AddHostedService<SampleHostedService>()
                         .AddHostedService<SampleBackgroundService>();
 
+                    // Add configurations
                     services.Configure<SampleBackgroundServiceOptions>(
                         host.Configuration.GetSection("SampleBackgroundService"));
 
+                    // Add dependencies
                     services.AddSingleton<ISampleService, SampleService>();
                 });
         }
