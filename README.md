@@ -1,5 +1,7 @@
 ﻿# ABnet.BackgroundWorkers
 
+[![Tests](https://github.com/abnetsl/dotnet-background-workers-sample/actions/workflows/tests.yml/badge.svg)](https://github.com/abnetsl/dotnet-background-workers-sample/actions/workflows/tests.yml)
+
 This is a sample repository for creating background workers using .NET Core.
 
 ## Commands
